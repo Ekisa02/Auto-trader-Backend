@@ -1,51 +1,55 @@
-# Auto Trader Backend
+# Auto-trader Backend
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Installation Instructions](#installation-instructions)
-3. [Requirements](#requirements)
-4. [Environment Setup](#environment-setup)
-5. [Language and Framework Details](#language-and-framework-details)
+- [Project Overview](#project-overview)
+- [Installation Instructions](#installation-instructions)
+- [Requirements](#requirements)
+- [Environment Setup](#environment-setup)
+- [Languages & Frameworks](#languages--frameworks)
+- [Project Structure](#project-structure)
 
 ## Project Overview
-Auto Trader is a backend service that supports an online trading platform. It provides APIs for managing user accounts, trade processes, and real-time data fetching necessary for successful trading.
+This project is a backend application designed for automated trading using various financial libraries and protocols. Utilizing the FastAPI framework, it intends to provide a robust and scalable solution for developing trading applications.
 
 ## Installation Instructions
-To install and set up the Auto Trader Backend, follow these steps:
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/Ekisa02/Auto-trader-Backend.git
-   ```
-
-2. Navigate into the project directory:
-   ```bash
    cd Auto-trader-Backend
    ```
-
+2. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 3. Install the required packages:
    ```bash
-   npm install
+   pip install -r requirements.txt
    ```
 
 ## Requirements
-- Node.js version 14 or higher
-- MongoDB (local or hosted)
-- Access to a command-line interface
+- Python 3.8 or later
+- FastAPI
+- numpy
+- pandas
+- websockets
+- mt5linux
+- Other trading-related libraries as required
 
 ## Environment Setup
-1. Create a `.env` file in the root of the project.
-2. Add the following environment variables (example):
-   ```
-   PORT=3000
-   DATABASE_URL=mongodb://localhost:27017/autotrader
-   JWT_SECRET=your_jwt_secret
-   ```
+Set up your environment variables as needed for the specific configurations required by the trading libraries and FastAPI settings. Ensure to include API keys and secret tokens securely.
 
-3. Ensure MongoDB is running locally or change the database URL to your hosted MongoDB instance.
+## Languages & Frameworks
+- **Python**
+- **FastAPI**
 
-## Language and Framework Details
-- **Programming Language**: JavaScript
-- **Framework**: Node.js and Express for building APIs
-- **Database**: MongoDB for data storage
-- **Others**: JWT for authentication, Mongoose for ODM
+## Project Structure
+```plaintext
+Auto-trader-Backend/
+├── main.py                   # Entry point for the application
+├── api/                      # Directory for API routes
+├── models/                   # Directory for data models
+├── services/                 # Directory for business logic and services
+├── tests/                    # Unit and integration tests
+└── requirements.txt          # List of dependencies
+```
